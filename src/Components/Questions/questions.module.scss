@@ -1,0 +1,13 @@
+.questions {
+	display: flex;
+	justify-content: space-between;
+}
+.questionsLeft {
+	width: 44.51vw;
+}
+
+.questionsRight {
+	width: 44.51vw;
+	background: url('../../assets/img/question.png') center center / cover
+		no-repeat;
+}

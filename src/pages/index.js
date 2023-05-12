@@ -1,0 +1,7 @@
+export * from './Main/Main'
+export * from './About/About'
+export * from './InfoPrograms/InfoPrograms'
+export * from './News/News'
+export * from './NewsOpen/NewsOpen'
+export * from './Contacts/Contacts'
+export * from './Resources/Resources'
