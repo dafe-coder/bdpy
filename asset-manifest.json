@@ -1,0 +1,42 @@
+{
+  "files": {
+    "main.css": "/bdpy/static/css/main.d397ce67.css",
+    "main.js": "/bdpy/static/js/main.c16726ce.js",
+    "static/media/bg_main.png": "/bdpy/static/media/bg_main.bd9a78f4b5a25b3a1ecd.png",
+    "static/media/univer.png": "/bdpy/static/media/univer.25d87a5766f3f7468f51.png",
+    "static/media/question.png": "/bdpy/static/media/question.5448b74fd80638a202bc.png",
+    "static/media/bg_modal.png": "/bdpy/static/media/bg_modal.db31ae7be0a4bb8fd594.png",
+    "static/media/bg_contacts.png": "/bdpy/static/media/bg_contacts.b4c788e4f8b755e8fc8e.png",
+    "static/media/bg_info-programs.png": "/bdpy/static/media/bg_info-programs.8d25cab5690092637e2e.png",
+    "static/media/shef.png": "/bdpy/static/media/shef.509a8b46ab0d335581bd.png",
+    "static/media/bg_resources.png": "/bdpy/static/media/bg_resources.d966c0d1e9ec1e1a2101.png",
+    "static/media/bg_about.png": "/bdpy/static/media/bg_about.b8b96215a3c2ee08d544.png",
+    "static/media/SFProDisplay-Heavy.woff": "/bdpy/static/media/SFProDisplay-Heavy.fb78e318d6de7c54c4ab.woff",
+    "static/media/SFProDisplay-Black.woff": "/bdpy/static/media/SFProDisplay-Black.d2a6e349784ebe137beb.woff",
+    "static/media/SFProDisplay-Bold.woff": "/bdpy/static/media/SFProDisplay-Bold.0769ece5c3137e629a68.woff",
+    "static/media/SFProDisplay-Semibold.woff": "/bdpy/static/media/SFProDisplay-Semibold.b4bb1c9ee18a597be589.woff",
+    "static/media/SFProDisplay-Medium.woff": "/bdpy/static/media/SFProDisplay-Medium.f07f1694174fcbeec8ca.woff",
+    "static/media/SFProDisplay-Light.woff": "/bdpy/static/media/SFProDisplay-Light.9782a497db34c9964aa5.woff",
+    "static/media/Rectangle 22.png": "/bdpy/static/media/Rectangle 22.bd19dce7f7d00837d29a.png",
+    "static/media/Rectangle 20.png": "/bdpy/static/media/Rectangle 20.8fef7b56fbbbe6f282b8.png",
+    "static/media/Rectangle 17.png": "/bdpy/static/media/Rectangle 17.84d1f5d5953351ea58f6.png",
+    "static/media/Rectangle 21.png": "/bdpy/static/media/Rectangle 21.c2dfae1f7941b34ef85b.png",
+    "static/media/Rectangle 19.png": "/bdpy/static/media/Rectangle 19.0fa4c941d627429c97d1.png",
+    "static/media/Rectangle 23.png": "/bdpy/static/media/Rectangle 23.5508cb9de37e7d0c9d34.png",
+    "static/media/SFProDisplay-Heavy.woff2": "/bdpy/static/media/SFProDisplay-Heavy.a5326aebd6a7d454ffce.woff2",
+    "static/media/SFProDisplay-Semibold.woff2": "/bdpy/static/media/SFProDisplay-Semibold.7de7cecb439de0fad3a4.woff2",
+    "static/media/SFProDisplay-Medium.woff2": "/bdpy/static/media/SFProDisplay-Medium.d2996deff52e990c290b.woff2",
+    "static/media/SFProDisplay-Light.woff2": "/bdpy/static/media/SFProDisplay-Light.9e85d423e56537e4667d.woff2",
+    "static/media/SFProDisplay-Bold.woff2": "/bdpy/static/media/SFProDisplay-Bold.312277c1bcb06467dbce.woff2",
+    "static/media/SFProDisplay-Black.woff2": "/bdpy/static/media/SFProDisplay-Black.7ee28674ccdb52bc9def.woff2",
+    "static/media/timesNewRoman-bold-italic.woff": "/bdpy/static/media/timesNewRoman-bold-italic.8e18a0e8408eb6714cbd.woff",
+    "static/media/timesNewRoman-bold-italic.woff2": "/bdpy/static/media/timesNewRoman-bold-italic.f7733d888248514081f8.woff2",
+    "index.html": "/bdpy/index.html",
+    "main.d397ce67.css.map": "/bdpy/static/css/main.d397ce67.css.map",
+    "main.c16726ce.js.map": "/bdpy/static/js/main.c16726ce.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d397ce67.css",
+    "static/js/main.c16726ce.js"
+  ]
+}
