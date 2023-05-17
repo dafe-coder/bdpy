@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bdpy/static/css/main.d397ce67.css",
-    "main.js": "/bdpy/static/js/main.c16726ce.js",
+    "main.js": "/bdpy/static/js/main.25c77f54.js",
     "static/media/bg_main.png": "/bdpy/static/media/bg_main.bd9a78f4b5a25b3a1ecd.png",
     "static/media/univer.png": "/bdpy/static/media/univer.25d87a5766f3f7468f51.png",
     "static/media/question.png": "/bdpy/static/media/question.5448b74fd80638a202bc.png",
@@ -33,10 +33,10 @@
     "static/media/timesNewRoman-bold-italic.woff2": "/bdpy/static/media/timesNewRoman-bold-italic.f7733d888248514081f8.woff2",
     "index.html": "/bdpy/index.html",
     "main.d397ce67.css.map": "/bdpy/static/css/main.d397ce67.css.map",
-    "main.c16726ce.js.map": "/bdpy/static/js/main.c16726ce.js.map"
+    "main.25c77f54.js.map": "/bdpy/static/js/main.25c77f54.js.map"
   },
   "entrypoints": [
     "static/css/main.d397ce67.css",
-    "static/js/main.c16726ce.js"
+    "static/js/main.25c77f54.js"
   ]
 }
