@@ -29,7 +29,9 @@ export const NewsOpen = () => {
 					{newsOpenData !== null ? (
 						<div className='news-open-info'>
 							<h4>{newsOpenData.title}</h4>
-							<p className='par publish-date'>Опубліковано 17.04.2023</p>
+							<p className='par publish-date'>
+								Опубліковано {newsOpenData.published.slice(0, 10)}
+							</p>
 							<div
 								dangerouslySetInnerHTML={{
 									__html: newsOpenData.content,

@@ -9,7 +9,7 @@ export const fetchAboutUs = createAsyncThunk(
 	'api/fetchAboutUsStatus',
 	async (params) => {
 		const { data } = await axios.get(
-			'https://bdpu.000webhostapp.com/api/about-us'
+			process.env.REACT_APP_API_URL + '/about-us'
 		)
 		return data
 	}

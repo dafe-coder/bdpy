@@ -3,12 +3,17 @@ import axios from 'axios'
 
 const initialState = {
 	educationPrograms: [],
+	filtersList: [
+		'Всі програми',
+		'Всі умови для вступу',
+		'Всі предмети для вступу',
+	],
 }
 export const fetchInfoPrograms = createAsyncThunk(
 	'api/fetchInfoProgramsStatus',
 	async (params) => {
 		const { data } = await axios.get(
-			'https://bdpu.000webhostapp.com/api/education-programs'
+			process.env.REACT_APP_API_URL + '/education-programs'
 		)
 		return data
 	}
@@ -16,7 +21,17 @@ export const fetchInfoPrograms = createAsyncThunk(
 const infoProgramsSlice = createSlice({
 	name: 'info-programs',
 	initialState,
-	reducers: {},
+	reducers: {
+		setFilterList(state, action) {
+			state.filtersList = state.filtersList.map((item, i) => {
+				if (i === action.payload.id) {
+					return action.payload.title
+				} else {
+					return item
+				}
+			})
+		},
+	},
 	extraReducers: (builder) => {
 		builder
 			.addCase(fetchInfoPrograms.rejected, (state) => {
@@ -30,5 +45,7 @@ const infoProgramsSlice = createSlice({
 			})
 	},
 })
+
+export const { setFilterList } = infoProgramsSlice.actions
 
 export default infoProgramsSlice.reducer

@@ -11,7 +11,7 @@ export const Footer = () => {
 					</h2>
 					<div className='footer-btns'>
 						{' '}
-						<a href='!#'>
+						<a href='/contacts'>
 							<SvgIcon type='circle-with-arrow' />
 							<span>Напишіть нам</span>
 						</a>
@@ -46,19 +46,39 @@ export const Footer = () => {
 						<ul>
 							<li>Тимчасово переміщений до:</li>
 							<li>
-								<p>м. Запоріжжя,</p>
+								<a
+									target='_blank'
+									rel='noreferrer'
+									href='https://goo.gl/maps/ZQRrTE4JHqaGFG5YA'>
+									м. Запоріжжя,
+								</a>
 							</li>
 							<li>
-								<p>вул. Жуковського, 66</p>
+								<a
+									target='_blank'
+									rel='noreferrer'
+									href='https://goo.gl/maps/ZQRrTE4JHqaGFG5YA'>
+									вул. Жуковського, 66
+								</a>
 							</li>
 						</ul>
 						<ul>
 							<li>Юридична адреса:</li>
 							<li>
-								<p>71100, Україна, Запорізька обл.,</p>
+								<a
+									target='_blank'
+									rel='noreferrer'
+									href='https://goo.gl/maps/diqys6ZUGDkcBnL27'>
+									71100, Україна, Запорізька обл.,
+								</a>
 							</li>
 							<li>
-								<p>м. Бердянськ, вул. Шмідта, 4</p>
+								<a
+									target='_blank'
+									rel='noreferrer'
+									href='https://goo.gl/maps/diqys6ZUGDkcBnL27'>
+									м. Бердянськ, вул. Шмідта, 4
+								</a>
 							</li>
 						</ul>
 					</div>

@@ -2,16 +2,16 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { fetchNews } from './../../redux/slices/NewsSlice'
 import { NewsItem } from '../../Components'
+import { LoaderNews } from './../../Components/Loader/LoaderNews'
 
 export const News = () => {
 	const { newsList } = useSelector((state) => state.news)
 	const dispatch = useDispatch()
-	React.useEffect(() => {
-		console.log(newsList)
-	}, [newsList])
+
 	React.useEffect(() => {
 		dispatch(fetchNews())
 	}, [dispatch])
+
 	return (
 		<>
 			<section className='resources-main-s'>
@@ -24,9 +24,9 @@ export const News = () => {
 			<section className='news-s'>
 				<div className='container'>
 					<div className='news'>
-						<ul className='news-list'>
-							{newsList.length &&
-								newsList.map((item) => (
+						{newsList.length ? (
+							<ul className='news-list'>
+								{newsList.map((item) => (
 									<NewsItem
 										id={item.id}
 										key={item.id}
@@ -35,7 +35,15 @@ export const News = () => {
 										title={item.title}
 									/>
 								))}
-						</ul>
+							</ul>
+						) : (
+							<div className='news-loader'>
+								<LoaderNews />
+								<LoaderNews />
+								<LoaderNews />
+								<LoaderNews />
+							</div>
+						)}
 					</div>
 				</div>
 			</section>

@@ -1,0 +1,41 @@
+.wrap {
+	margin-top: 3.66vw;
+	color: white;
+	padding: 5.12vw 0;
+	display: flex;
+	h2 {
+		text-align: center;
+		margin-bottom: 3.66vw;
+	}
+	a svg {
+		height: 3.66vw;
+		width: 3.66vw;
+	}
+	a {
+		margin: 0 auto;
+		gap: 1.46vw;
+		display: flex;
+		align-items: center;
+		font-size: 1.17vw;
+		line-height: 1.76vw;
+		color: #ffffff;
+		font-weight: 700;
+		font-family: 'Montserrat', sans-serif;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.wrap {
+		margin-top: 0;
+		margin-bottom: 50px;
+		a {
+			gap: 20px;
+			font-size: 16px;
+			line-height: 24px;
+			svg {
+				height: 35px;
+				width: 35px;
+			}
+		}
+	}
+}

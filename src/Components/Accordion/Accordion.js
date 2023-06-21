@@ -8,59 +8,14 @@ import {
 } from 'react-accessible-accordion'
 import styles from './accordion.module.css'
 import { SvgIcon } from './../../Svgs/Svg'
+import { LoaderAccordion } from '../Loader/LoaderAccordion'
+import { LoaderPrograms } from '../Loader/LoaderPrograms'
 
-export const AccordionBlock = ({ data, titles = false, link = false }) => {
-	if (data.length && titles) {
+export const AccordionBlock = ({ data, link = false, allWidth = false }) => {
+	if (data.length) {
 		return (
 			<Accordion
-				allowZeroExpanded
-				preExpanded={[1]}
-				className={styles.accordion}>
-				{titles.length &&
-					titles.map((item, i) => {
-						const filterData = data.filter(
-							(dataItem) => dataItem.faculty_name === item
-						)
-						console.log(filterData)
-						return (
-							<AccordionItem uuid={i} key={i}>
-								<AccordionItemHeading>
-									<AccordionItemButton>{item}</AccordionItemButton>
-								</AccordionItemHeading>
-								<AccordionItemPanel>
-									<ul className='list-item'>
-										<li>
-											<span>Назва спеціальності</span>
-											<span>Освітній ступінь</span>
-										</li>
-										{filterData.length ? (
-											filterData.map((item) => (
-												<li className='program-item' key={item.id}>
-													<span>{item.specialty_name}</span>
-													<span>
-														{item.education_program_info
-															.map(
-																(item) =>
-																	item.education_degree[0].toUpperCase() + ','
-															)
-															.join('')
-															.slice(0, -1)}
-													</span>
-												</li>
-											))
-										) : (
-											<></>
-										)}
-									</ul>
-								</AccordionItemPanel>
-							</AccordionItem>
-						)
-					})}
-			</Accordion>
-		)
-	} else if (data.length) {
-		return (
-			<Accordion
+				allowMultipleExpanded
 				allowZeroExpanded
 				preExpanded={[data[0].id.toString()]}
 				className={styles.accordion}>
@@ -71,14 +26,12 @@ export const AccordionBlock = ({ data, titles = false, link = false }) => {
 								<AccordionItemButton>{item.title}</AccordionItemButton>
 							</AccordionItemHeading>
 							<AccordionItemPanel>
-								<p>{item.content}</p>
+								<p dangerouslySetInnerHTML={{ __html: item.content }}></p>
 								{link && item.files.length ? (
 									item.files.map((item, i) => (
-										<a className='pdf-link' href={item} key={i}>
+										<a className='pdf-link' href={item.file} key={i}>
 											<SvgIcon type='pdf' />
-											<span>
-												«Cтруктура та критерії оцінювання мотиваційного листа»
-											</span>
+											<span>{item.name}</span>
 										</a>
 									))
 								) : (
@@ -88,6 +41,27 @@ export const AccordionBlock = ({ data, titles = false, link = false }) => {
 						</AccordionItem>
 					))}
 			</Accordion>
+		)
+	} else if (!allWidth) {
+		return (
+			<div className='accordion-loader'>
+				<LoaderAccordion />
+				<LoaderAccordion />
+				<LoaderAccordion />
+				<LoaderAccordion />
+				<LoaderAccordion />
+				<LoaderAccordion />
+			</div>
+		)
+	} else {
+		return (
+			<div className='programs-loader'>
+				<LoaderPrograms />
+				<LoaderPrograms />
+				<LoaderPrograms />
+				<LoaderPrograms />
+				<LoaderPrograms />
+			</div>
 		)
 	}
 }

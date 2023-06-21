@@ -6,7 +6,7 @@ export const Questions = () => {
 	const { faq } = useSelector((state) => state.api)
 
 	return (
-		<section className={styles.questionsS}>
+		<section className={styles.questionsS} id='questions'>
 			<div className='container'>
 				<div className={styles.questions}>
 					<div className={styles.questionsLeft}>

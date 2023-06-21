@@ -23,7 +23,7 @@ export const Resources = () => {
 			<section className='resources-tabs-s'>
 				<div className='container'>
 					<div className='resources-tabs'>
-						<AccordionBlock data={resourcesData} link />
+						<AccordionBlock allWidth data={resourcesData} link />
 					</div>
 				</div>
 			</section>

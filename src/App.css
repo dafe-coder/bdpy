@@ -61,6 +61,21 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
+*::-webkit-scrollbar {
+  width: 0.37vw;
+  height: 0.59vw;
+  background-color: #1a0907; /* or add it to the track */
+}
+
+/* Add a thumb */
+*::-webkit-scrollbar-thumb {
+  background: #aaa;
+}
+
+* {
+  scrollbar-color: #aaa #1a0907 !important;
+  scrollbar-width: thin !important;
+}
 /* Sections
    ========================================================================== */
 /**
@@ -367,7 +382,7 @@ template {
  * Published under MIT License
  */
 .ac {
-  margin-top: 8px;
+  margin-top: 0.59vw;
   border: 1px solid #eee;
   background-color: #fff;
   box-sizing: border-box;
@@ -383,7 +398,7 @@ template {
   color: #111;
   text-align: left;
   width: 100%;
-  padding: 8px 32px 8px 8px;
+  padding: 0.59vw 2.34vw 0.59vw 0.59vw;
   display: block;
   cursor: pointer;
   background-color: transparent;
@@ -397,11 +412,11 @@ template {
 .ac .ac-trigger::after {
   content: "+";
   text-align: center;
-  width: 15px;
+  width: 1.10vw;
   -webkit-transform: translate(0, -50%);
   transform: translate(0, -50%);
   position: absolute;
-  right: 10px;
+  right: 0.73vw;
   top: 50%;
 }
 
@@ -453,9 +468,13 @@ h5,
 h6 {
   margin: 0;
 }
-
-ul,
-li {
+ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+}
+ul li
+ {  
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -549,6 +568,7 @@ h3 {
 }
 
 .par {
+  white-space: pre-wrap;
   font-size: 1.32vw;
   line-height: 2.2vw;
   font-family: "Montserrat", sans-serif;
@@ -571,7 +591,8 @@ h3 {
 }
 
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 1000;
   background: #ffffff;
 }
@@ -579,7 +600,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 6.66vw;
+  height: 6vw;
 }
 .header-body a {
   display: flex;
@@ -602,7 +623,12 @@ h3 {
   font-weight: 600;
   display: flex;
   align-items: center;
+  transition: all ease .2s;
 }
+.header-links ul li a:hover {
+  transform: scale(1.02);
+}
+
 .header-links ul li svg {
   margin-right: 0.39vw;
   height: 1.26vw;
@@ -659,9 +685,9 @@ h3 {
 }
 
 .header-nav {
-  position: absolute;
-  top: -60vw;
-  height: calc(100vh - 6.67vw);
+  position: fixed;
+  top: -100vh;
+  height: calc(100vh - 6vw);
   z-index: 10;
   background: #ffffff;
   left: 0;
@@ -682,9 +708,15 @@ h3 {
   font-size: 1.76vw;
   line-height: 2.2vw;
   color: #170807;
+  transform: scale(1);
+  transition: all ease .2s;
+  display: flex;
+}
+.header-nav--list li a:hover {
+  transform: scale(1.02);
 }
 .header-nav__left {
-  padding-top: 2.2vw;
+  padding: 2.2vw 0;
   flex-basis: 33%;
 }
 .header-nav__right {
@@ -697,7 +729,7 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, 21.23vw);
   gap: 2.56vw 9.88vw;
-  padding-bottom: 40px;
+  padding-bottom: 2.93vw;
 }
 .header-nav--news__img {
   width: 100%;
@@ -746,7 +778,7 @@ h3 {
   margin-top: 3.66vw;
 }
 .header-nav.is-open {
-  top: 6.67vw;
+  top: 6vw;
 }
 
 .all-rights {
@@ -822,7 +854,11 @@ h3 {
 }
 .footer-nav ul li a {
   color: #ffffff;
+  display: flex;
   transition: all ease 0.2s;
+}
+.footer-nav ul li a:hover {
+  transform: scale(1.02);
 }
 .footer-nav ul li a:hover {
   color: #fdfdfd;
@@ -847,9 +883,9 @@ h3 {
 }
 .main-s {
   background: url("./assets/img/bg_main.png") center center/cover no-repeat;
-  height: calc(100vh - 6.66vw);
+  height: calc(100vh - 6vw);
   min-height: 38.92vw;
-  padding: 0 0 34px;
+  padding: 0 0 2.49vw;
   overflow: hidden;
 }
 .main-s::after {
@@ -880,8 +916,11 @@ h3 {
   display: flex;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-top: 5.12vw;
+}
+.main-nav > *:not(:last-child) {
+  margin-right: 3.5vw;
 }
 .main-nav > *:not(:last-child)::after {
   content: "";
@@ -902,10 +941,18 @@ h3 {
   line-height: 1.76vw;
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
+  transition: all ease .2s;
+  display: flex;
+}
+.main-nav li a:hover {
+  transform: scale(1.02);
+}
+.important-date-s {
+  padding: 3.66vw 0 0; 
 }
 
-.important-date-s {
-  padding: 3.66vw 0;
+#questions {
+  padding: 6vw 0 0; 
 }
 .important-date__header {
   display: flex;
@@ -939,14 +986,14 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, auto);
   border-top: 1px solid #170807;
-  border-bottom: 1px solid #170807;
+  /* border-bottom: 1px solid #170807; */
 }
 .date-list li {
   display: flex;
   align-items: center;
   padding: 2.2vw 0;
   border-bottom: 1px solid #170807;
-  margin-bottom: -0.7px;
+  /* margin-bottom: -0.7px; */
 }
 .date-list li.border-bottom-none {
   border-bottom: none;
@@ -1051,6 +1098,8 @@ h3 {
   width: 100%;
   height: 43.92vw;
   object-fit: cover;
+  transition: all ease .3s;
+  object-fit: cover
 }
 
 .ac {
@@ -1327,16 +1376,25 @@ ul.list-item li:last-child {
 }
 .tab-modal {
   position: fixed;
-  overflow-y: scroll;
+  display: flex;
+  justify-content: flex-end;
   width: 100%;
   height: 100%;
   z-index: 1000000;
-  background: #ffffff;
+  background: rgba(0, 0, 0, 0.8);
   top: 0;
   left: 100%;
   right: 0;
   bottom: 0;
   transition: all ease 1s;
+}
+.tab-modal-wrap {
+  background: white;
+  width: 80%;
+  overflow-y: scroll;border-radius: 1.17vw 0 0 0;
+}
+.tab-modal-wrap .container {
+  padding: 0 2vw;
 }
 .tab-modal.is-open {
   left: 0;
@@ -1349,10 +1407,14 @@ ul.list-item li:last-child {
 }
 .tab-modal__header--wrap {
   background: url("./assets/img/bg_modal.png") center center/cover no-repeat;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   height: 25.62vw;
   padding: 2.56vw 0;
   display: flex;
+}
+.tab-modal__header--top span {
+  color: #fff;
+  font-size: 1.5vw;
 }
 .tab-modal__header--top {
   display: flex;
@@ -1372,6 +1434,8 @@ ul.list-item li:last-child {
   align-items: center;
 }
 .tab-modal__header--bottom a {
+  display: flex;
+  align-items: center;
   color: #ffffff;
   font-family: "Montserrat", sans-serif;
   font-size: 1.17vw;
@@ -1482,6 +1546,7 @@ ul.list-item li:last-child {
   padding: 1.46vw 1.46vw 1.46vw 1.24vw;
   font-size: 1.32vw;
   line-height: 1.76vw;
+  border: 1px solid #1A0907;
 }
 .form-inp input::placeholder {
   color: #170807;
@@ -1542,20 +1607,20 @@ ul.list-item li:last-child {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 }
-.ac .list-text {
+.list-text {
   list-style: disc;
   padding-left: 1.46vw;
 }
-.ac .list-text li {
+.list-text li {
   display: block;
   position: relative;
   padding: 0;
   padding-left: 1.1vw;
   border-bottom: none;
-  margin-bottom: 15px;
+  margin-bottom: 1.10vw;
   font-family: "Montserrat", sans-serif;
 }
-.ac .list-text li::before {
+.list-text li::before {
   position: absolute;
   content: "•"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: #170807; /* Change the color */
@@ -1650,6 +1715,13 @@ ul.list-item li:last-child {
 .news-open-info-s {
   padding: 3.66vw 0 4.32vw;
 }
+.news-open-info-s img {
+  margin: 1.5vw 0;
+}
+.news-open-info {
+  width: 70%;
+  margin: 0 auto;
+}
 .news-open-info h4 {
   margin-bottom: 0.73vw;
   font-size: 1.76vw;
@@ -1679,7 +1751,7 @@ ul.list-item li:last-child {
   height: 36.6vw;
 }
 .news-open-info > p:not(:last-of-type) {
-  margin-bottom: 20px;
+  margin-bottom: 1.46vw;
 }
 
 .compare-main {
@@ -1727,4 +1799,20 @@ ul.list-item li:last-child {
 .compare-body__header button svg {
   width: 1.54vw;
   height: 1.76vw;
+}
+
+.achievement-block a svg {
+  transition: all ease 1s;
+}
+.achievement-block a.active  svg {
+  transform: scale(-1) rotate(90deg) ;
+}
+.header-links ul li:last-child a:hover {
+  transform: scale(1);
+}
+a, button {
+  transition: all ease .2s;
+}
+a:hover , button:hover {
+  transform: scale(1.02);
 }

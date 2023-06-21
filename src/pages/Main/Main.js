@@ -1,10 +1,26 @@
 import React from 'react'
 import videoBg from '../../assets/img/shef.png'
-import { EventsList, EventNav, LatestNews, Questions } from '../../Components'
+import {
+	EventsList,
+	EventNav,
+	LatestNews,
+	Questions,
+	VideoPlayer,
+	NewAdults,
+	GoTelegram,
+} from '../../Components'
 import { Link } from 'react-router-dom'
+import rotatePhoneImg from '../../assets/img/rotate_phone.png'
+
 export const Main = () => {
+	const [openVideoModal, setOpenVideoModal] = React.useState(false)
+
 	return (
 		<div className='content'>
+			<VideoPlayer
+				openVideoModal={openVideoModal}
+				setOpenVideoModal={setOpenVideoModal}
+			/>
 			<section className='main-s'>
 				<div className='container'>
 					<div className='main'>
@@ -12,37 +28,57 @@ export const Main = () => {
 							Обираючи майбутнє <br />― обирай БДПУ!
 						</h1>
 						<p className='par'>
-							Тимчасово переміщені – назавжди міцні та нескорені!
+							Тимчасово переміщені <br className='br-mob' />–{' '}
+							<br className='br-mob' />
+							назавжди міцні та нескорені!
 						</p>
-						<img className='video' src={videoBg} alt='alt' />
+						<img
+							style={{ cursor: 'pointer' }}
+							className='video'
+							src={videoBg}
+							alt='alt'
+							onClick={() => setOpenVideoModal(true)}
+						/>
 						<ul className='main-nav'>
 							<li>
-								{' '}
 								<Link to='/about'>Про університет </Link>
 							</li>
 							<li>
-								<a href='./info-programs'>Освітні програми</a>
+								<Link to='/info-programs/id=null'>Освітні програми</Link>
 							</li>
 							<li>
-								{' '}
-								<a href='!#'>Правила вступу</a>
+								<a
+									target='_blank'
+									rel='noreferrer'
+									href='https://bdpu.org.ua/entry-rules/'>
+									Правила вступу
+								</a>
 							</li>
 							<li>
-								{' '}
-								<a href='./resources'>Ресурси для вступників</a>
+								<Link to='/resources'>Ресурси для вступників</Link>
 							</li>
+							{/* <li>
+								<Link to='!#'>Зарахування на навчання</Link>
+							</li> */}
 							<li>
-								{' '}
-								<a href='!#'>Зарахування на навчання</a>
-							</li>
-							<li>
-								{' '}
-								<a href='./contacts'>Контакти</a>
+								<Link to='/contacts'>Контакти</Link>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</section>
+			<div className='rotate-s'>
+				<h5>Важливі дати</h5>
+				<img
+					src={rotatePhoneImg}
+					className='rotate-img'
+					alt='Повернiть телефон горизонтально'
+				/>
+				<p className='par'>
+					Для оптимального відображення календаря, рекомендується повернути
+					екран у горизонтальне положення. Дякуємо!
+				</p>
+			</div>
 			<section className='important-date-s'>
 				<div className='container'>
 					<div className='important-date'>
@@ -54,7 +90,9 @@ export const Main = () => {
 					</div>
 				</div>
 			</section>
+			<NewAdults />
 			<Questions />
+			<GoTelegram />
 			<LatestNews />
 		</div>
 	)

@@ -9,7 +9,7 @@ export const NewsItem = ({ id, img, title, par }) => {
 					<img src={img} alt='new1' />
 				</div>
 				<div className='news-item__info'>
-					<h3>{title}</h3>
+					<h3>{title.length > 30 ? title.slice(0, 40) + '...' : title}</h3>
 					<p className='par'>{par.slice(0, 50) + '...'}</p>
 				</div>
 			</Link>

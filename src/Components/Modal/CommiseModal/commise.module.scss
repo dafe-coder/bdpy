@@ -1,0 +1,135 @@
+.modal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h5 {
+		font-size: 1.76vw;
+		line-height: 2.64vw;
+		margin-bottom: 1.46vw;
+		text-transform: uppercase;
+	}
+	ul {
+		& > * {
+			&:not(:last-child) {
+				margin-bottom: 1.46vw;
+			}
+		}
+		li {
+			border: 1px solid #1a0907;
+			padding: 1.46vw 0;
+			width: 43.92vw;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			& > * {
+				&:not(:last-child) {
+					margin-bottom: 1.46vw;
+				}
+			}
+			p {
+				font-size: 1.17vw;
+				line-height: 1.76vw;
+				font-family: 'Montserrat', sans-serif;
+
+				&:first-child {
+					font-weight: 700;
+				}
+				& > * {
+					&:not(:last-child) {
+						margin-right: 0.37vw;
+					}
+				}
+			}
+		}
+	}
+	a {
+		font-size: 1.17vw;
+		line-height: 1.76vw;
+		color: #000000;
+		font-family: 'Montserrat', sans-serif;
+	}
+}
+
+.btn {
+	margin-top: 2.2vw;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	svg {
+		height: 3.66vw;
+		width: 3.66vw;
+		margin-right: 1.46vw;
+		transform: scale(-1);
+	}
+	span {
+		font-weight: 700;
+		font-size: 1.17vw;
+		line-height: 1.76vw;
+		color: #000000;
+		font-family: 'Montserrat', sans-serif;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.modal {
+		h5 {
+			font-size: 16px;
+			line-height: 24px;
+			margin-bottom: 15px;
+		}
+		ul {
+			& > * {
+				&:not(:last-child) {
+					margin-bottom: 17px;
+				}
+			}
+			li {
+				width: 290px;
+				padding: 15px 0;
+				p {
+					font-size: 14px;
+					line-height: 18px;
+					display: flex;
+					flex-wrap: wrap;
+					& > * {
+						&:not(:last-child) {
+							margin-right: 0;
+							margin-bottom: 5px;
+						}
+					}
+					a {
+						flex-basis: 100%;
+						text-align: center;
+					}
+				}
+			}
+		}
+		a {
+			font-size: 14px;
+			line-height: 18px;
+			color: #000000;
+		}
+	}
+
+	.btn {
+		margin-top: 20px;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		svg {
+			height: 35px;
+			width: 35px;
+			margin-right: 20px;
+			transform: scale(-1);
+		}
+		span {
+			font-weight: 700;
+			font-size: 14px;
+			line-height: 18px;
+			color: #000000;
+		}
+	}
+}

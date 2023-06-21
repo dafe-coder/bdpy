@@ -11,16 +11,34 @@ import img4 from '../../assets/img/achievement/Rectangle 22.png'
 import img5 from '../../assets/img/achievement/Rectangle 17.png'
 import img6 from '../../assets/img/achievement/Rectangle 23.png'
 import { SvgIcon } from './../../Svgs/Svg'
+import cn from 'classnames'
+const showStatisticsCount = 2
 
 export const About = () => {
 	const dispatch = useDispatch()
 	const { accordion, universityStatistics } = useSelector(
 		(state) => state.about
 	)
+	const [lengthSt, setLengthSt] = React.useState(showStatisticsCount)
 
 	React.useEffect(() => {
 		dispatch(fetchAboutUs())
 	}, [dispatch])
+
+	React.useEffect(() => {
+		if (universityStatistics.length) {
+			setLengthSt(showStatisticsCount)
+		}
+	}, [universityStatistics])
+
+	const onOpenStatistic = (e) => {
+		e.preventDefault()
+		if (lengthSt === showStatisticsCount) {
+			setLengthSt(universityStatistics.length)
+		} else {
+			setLengthSt(showStatisticsCount)
+		}
+	}
 
 	return (
 		<>
@@ -46,11 +64,7 @@ export const About = () => {
 							</div>
 							<div className='about-block__right'>
 								{' '}
-								<img
-									style={{ objectFit: 'cover', height: '100%' }}
-									src={imgUniver}
-									alt='BSPY'
-								/>
+								<img src={imgUniver} alt='BSPY' />
 							</div>
 						</div>
 					</div>
@@ -72,16 +86,32 @@ export const About = () => {
 						</h2>
 						<div className='achievement-block'>
 							<ul>
-								{universityStatistics.map((item) => (
-									<li>
-										<span>{item.quantity}</span>
-										<span>{item.title}</span>
-									</li>
-								))}
+								{universityStatistics.map((item, i) => {
+									if (i <= lengthSt) {
+										return (
+											<li key={i}>
+												<span>{item.quantity}</span>
+												<span>{item.title}</span>
+											</li>
+										)
+									} else {
+										return false
+									}
+								})}
 							</ul>
-							<a href='!#'>
+							<a
+								href='!#'
+								className={cn({
+									//eslint-disable-next-line
+									['active']: lengthSt !== showStatisticsCount,
+								})}
+								onClick={(e) => onOpenStatistic(e)}>
 								<SvgIcon type='circle-with-arrow' />
-								<span>Показати більше досягнень </span>
+								{lengthSt === showStatisticsCount ? (
+									<span>Показати більше досягнень </span>
+								) : (
+									<span>Приховати</span>
+								)}
 							</a>
 						</div>
 					</div>

@@ -11,3 +11,12 @@
 	background: url('../../assets/img/question.png') center center / cover
 		no-repeat;
 }
+
+@media screen and (max-width: 480px) {
+	.questionsRight {
+		display: none;
+	}
+	.questionsLeft {
+		width: 100%;
+	}
+}

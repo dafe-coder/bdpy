@@ -8,9 +8,8 @@ export const fetchResources = createAsyncThunk(
 	'api/fetchResourcesStatus',
 	async (params) => {
 		const { data } = await axios.get(
-			'https://bdpu.000webhostapp.com/api/enrollment-materials'
+			process.env.REACT_APP_API_URL + '/enrollment-materials'
 		)
-		console.log(data)
 		return data
 	}
 )

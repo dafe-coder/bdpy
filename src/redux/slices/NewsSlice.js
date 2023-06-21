@@ -7,7 +7,7 @@ const initialState = {
 export const fetchNews = createAsyncThunk(
 	'api/fetchNewsStatus',
 	async (params) => {
-		const { data } = await axios.get('https://bdpu.000webhostapp.com/api/news')
+		const { data } = await axios.get(process.env.REACT_APP_API_URL + '/news')
 		return data
 	}
 )
