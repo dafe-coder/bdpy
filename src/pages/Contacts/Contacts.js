@@ -82,7 +82,7 @@ export const Contacts = () => {
 								</li>
 								<li>
 									<h6>Приймальна комісія:</h6>
-									<a href='tel:+380505642390'>+380505642390 </a>
+									<a href='tel:+380961578947'>+380961578947 </a>
 									<a href='mailto:pkombdpu@gmail.com'>pkombdpu@gmail.com </a>
 								</li>
 								<li>

@@ -15,7 +15,7 @@ export const Footer = () => {
 							<SvgIcon type='circle-with-arrow' />
 							<span>Напишіть нам</span>
 						</a>
-						<a href='tel:380505642390'>
+						<a href='tel:380961578947'>
 							<SvgIcon type='circle-with-arrow' />
 							<span>Зателефонуйте нам</span>
 						</a>
@@ -36,7 +36,7 @@ export const Footer = () => {
 							<li>Приймальна комісія:</li>
 							<li>
 								{' '}
-								<a href='tel:380505642390'> +380505642390</a>
+								<a href='tel:380961578947'> +380961578947</a>
 							</li>
 							<li>
 								{' '}

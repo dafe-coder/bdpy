@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './rector.module.scss'
 import { SvgIcon } from './../../../Svgs/Svg'
-import rectorImg from '../../../assets/img/rector.png'
+import rectorImg from '../../../assets/img/rector.jpeg'
 
 export const RectorModal = ({ onClose }) => {
 	return (
@@ -17,9 +17,10 @@ export const RectorModal = ({ onClose }) => {
 						<p>Богданов Ігор Тимофійович</p>
 					</li>
 					<li>
-						<p>Електронна пошта:</p>
+						<p>Електроннi пошти:</p>
 						<p>
-							<a href='mailto:rector_bdpu@ukr.net'>rector_bdpu@ukr.net</a> ,
+							<a href='mailto:rector_bdpu@ukr.net'>rector_bdpu@ukr.net</a>
+							{'   '}
 							<a href='mailto:bdpu.zp@gmail.com'>bdpu.zp@gmail.com</a>
 						</p>
 					</li>

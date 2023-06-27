@@ -337,6 +337,12 @@ $font-lora: 'Lora', serif;
 .btn-with-anim {
 	height: 4.39vw;
 }
+.social-links {
+	li {
+		display: flex;
+		align-items: center;
+	}
+}
 @media screen and (max-width: 980px) {
 	.main-s {
 		max-height: 500px;
@@ -616,6 +622,8 @@ $font-lora: 'Lora', serif;
 			}
 		}
 		ul li {
+			display: flex;
+			justify-content: center;
 			font-size: 16px;
 			line-height: 24px;
 			text-align: center;

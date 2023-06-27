@@ -1453,7 +1453,7 @@ ul.list-item li:last-child {
   font-weight: 700;
 }
 .tab-modal__body {
-  padding: 2.66vw 0 3.66vw;
+  padding: 0 0 3.66vw;
 }
 .tab-modal__body i {
   font-weight: 600;

@@ -38,10 +38,7 @@ export const SendLetter = ({ isOpen, specialtyName, close, categories }) => {
 			data.append('education_degree_name', levelValue)
 			setLoading(true)
 			axios
-				.post(
-					`${process.env.REACT_APP_API_URL}/server/api/applications/send`,
-					data
-				)
+				.post(`${process.env.REACT_APP_API_URL}/applications/send`, data)
 				.then(function (response) {
 					setTimerID(
 						setTimeout(() => {

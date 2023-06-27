@@ -14,15 +14,15 @@ export const CommiseModal = ({ onClose }) => {
 						href='https://goo.gl/maps/nSsDdnTn1TvnSg3H6'
 						target='_blank'
 						rel='noreferrer'>
-						м.Запоріжжя, вул.Жуковського, 66
+						м. Запоріжжя, вул. Жуковського, 66
 					</a>
 				</li>
 				<li>
 					<p>Телефон:</p>
 					<p>
-						<a href='tel:+380961578947'>+380961578947;</a>
+						{/* <a href='tel:+380961578947'>+380	961578947;</a> */}
 						<a href='tel:+380634771087'>+380634771087;</a>
-						<a href='tel:+380505642390'>+380505642390 (telegram)</a>
+						<a href='tel:+380961578947'>+380961578947 (telegram)</a>
 					</p>
 				</li>
 				<li>

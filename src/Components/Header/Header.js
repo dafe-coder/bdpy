@@ -117,9 +117,9 @@ export const Header = () => {
 										Нас часто запитують
 									</HashLink>
 								</li>
-								<li>
+								{/* <li>
 									<a href='!#'>Зарахування на навчання</a>
-								</li>
+								</li> */}
 								<li className='db-480'>
 									<a href='!#' onClick={(e) => onOpenRector(e)}>
 										<span>Приймальня Ректора </span>
